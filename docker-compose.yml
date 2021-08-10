@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  fbp:
+    image: ${DOCKER_REGISTRY-}fbp
+    build:
+      context: .
+      dockerfile: FBP/Dockerfile
+
+  organizationsetup:
+    image: ${DOCKER_REGISTRY-}organizationsetup
+    build:
+      context: .
+      dockerfile: OrganizationSetup/Dockerfile
+
